@@ -19,15 +19,115 @@
   <!-- CSS file link -->
   <link rel="stylesheet" href=style.css">
   <style>
-    body {
-      font-family: "Raleway", sans-serif;
-      font-family: "Inter", sans-serif;
+    header {
+      font-family: 'Inter';
     }
   </style>
 </head>
 
-<body>
-  <h1>Picture of Bangladesh</h1>
+<body class=" shadow-2xl mx-16 mt-4 p-10">
+  <header class="">
+    <nav class="flex justify-between items-center">
+      <h3 class="text-4xl font-extrabold">P-Ticket</h3>
+      <div class=" space-x-6 text-lg font-medium">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Destination</a>
+        <a href="">Search</a>
+      </div>
+      <div class=" flex space-x-1 text-lg font-medium">
+        <button>Bus</button>
+        <img src="images/bus-icon.png" alt="">
+      </div>
+    </nav>
+
+    <!--banner section  -->
+    <section style="background-image: url('images/banner.png');"
+      class=" mt-7 w-full h-screen bg-screen bg-no-repeat backdrop-brightness-200 ">
+      <div class="w-full h-full flex flex-col justify-center items-center space-y-6">
+        <h1 class="text-white text-6xl font-extrabold">End-to-End Travel with</h1>
+        <h2 class="text-[#1DD100] text-5xl font-extrabold">P Paribahan</h2>
+        <p class="text-white">Yes,you can run unit tests and view the results directly within the app. The <br>
+          integrated
+          testing features allow
+          for a stramlined.
+        </p>
+        <button class=" bg-[#1DD100] rounded-md text-xl font-bold px-3 py-2 ">Buy Tickets</button>
+      </div>
+
+    </section>
+
+    <section class="flex relative bottom-20 mx-12 space-x-3 ">
+
+      <div
+        class="flex justify-center items-center border-b-4 border-green-500 bg-white  space-x-2 w-72 h-32 shadow-2xl rounded-2xl">
+        <img src="images/people.png" alt="">
+        <div>
+          <h1 class="text-xl font-extrabold">500k+</h1>
+          <p>Registered users</p>
+        </div>
+      </div>
+
+      <div
+        class="flex justify-center items-center border-b-4 border-green-500 bg-white space-x-2 w-72 h-32 shadow-2xl rounded-2xl">
+        <img src="images/ticket-cupon.png" alt="">
+        <div>
+          <h2 class="text-xl font-extrabold">1.7 lacks</h2>
+          <p>Tickets sold</p>
+        </div>
+      </div>
+
+      <div
+        class="flex justify-center items-center border-b-4 border-green-500 bg-white  space-x-2 w-72 h-32 shadow-2xl rounded-2xl">
+        <img src="images/stoppage.png" alt="">
+        <div>
+          <h2 class="text-xl font-extrabold">80k+</h2>
+          <p>Rental partners</p>
+        </div>
+      </div>
+    </section>
+  </header>
+  <main>
+    <section>
+      <h1 class="text-4xl font-bold text-center pb-6">Best offers for you</h1>
+      <div class="flex space-x-4">
+        <div class="bg-yellow-500 flex justify-center items-center  w-full h-full rounded-2xl">
+          <div>
+            <h2 class="text-2xl font-extrabold">15% OFF</h2>
+            <p class="text-sm font-bold">on your next purchase</p>
+            <p>use by January 2024</p>
+          </div>
+          <div>
+            <img src="images/cupon-devider.png" alt="">
+          </div>
+          <div>
+            <h2 class="text-2xl font-extrabold">NEW15</h2>
+            <p>Coupon Code</p>
+          </div>
+        </div>
+        <div class="bg-rose-400 flex justify-center items-center  w-full h-full rounded-2xl">
+          <div>
+            <h2 class="text-2xl font-extrabold">20% OFF</h2>
+            <p class="text-sm font-bold">on your next purchase</p>
+            <p>use by January 2024</p>
+          </div>
+          <div>
+            <img src="images/cupon-devider.png" alt="">
+          </div>
+          <div>
+            <h2 class="text-2xl font-extrabold">Couple 20</h2>
+            <p>Coupon Code</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center pt-6 mt-3">
+        <button
+          class=" bg-slate-50 text-center text-[#1DD100] text-lg font-medium border-2 border-[#1DD100] rounded-xl shadow-xl px-4 py-2">See
+          All
+          Offers</button>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>
