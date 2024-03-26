@@ -26,10 +26,10 @@
 </head>
 
 <body class=" shadow-2xl mx-16 mt-4 p-10">
-  <header>
+  <header id="header">
     <nav class="flex justify-between items-center font-[raleway]">
-      <h3 class="text-4xl font-extrabold">P-Ticket</h3>
-      <div class=" space-x-6 text-lg font-medium">
+      <h3 class=" text-4xl font-extrabold ">P-Ticket</h3>
+      <div class="space-x-6 text-lg font-medium">
         <a href="">Home</a>
         <a href="">About</a>
         <a href="">Destination</a>
@@ -42,22 +42,24 @@
     </nav>
 
     <!--banner section  -->
-    <section style="background-image: url('images/banner.png'); font-[inter]"
-      class=" mt-7 w-full h-screen bg-screen bg-no-repeat backdrop-brightness-200 ">
+    <section style="background-image: url('images/banner.png');"
+      class=" mt-7 w-full h-full lg:h-screen bg-screen bg-no-repeat backdrop-brightness-200 ">
       <div class="w-full h-full flex flex-col justify-center items-center space-y-6">
-        <h1 class="text-white text-6xl font-extrabold">End-to-End Travel with</h1>
+        <h1 class="text-white lg:text-6xl font-extrabold">End-to-End Travel with</h1>
         <h2 class="text-[#1DD100] text-5xl font-extrabold">P Paribahan</h2>
         <p class="text-white">Yes,you can run unit tests and view the results directly within the app. The <br>
           integrated
           testing features allow
           for a stramlined.
         </p>
-        <button class=" bg-[#1DD100] rounded-md text-xl font-bold px-3 py-2 ">Buy Tickets</button>
+        <button class=" bg-[#1DD100] rounded-md text-xl font-bold px-3 py-2"><a href="#seats-section">Buy
+            Tickets</a></button>
+
       </div>
 
     </section>
 
-    <section class="flex relative bottom-20 mx-12 space-x-3 ">
+    <section class="flex relative lg:bottom-20 lg:mx-12 space-x-3 ">
 
       <div
         class="flex justify-center items-center border-b-4 border-green-500 bg-white  space-x-2 w-72 h-32 shadow-2xl rounded-2xl">
@@ -127,7 +129,7 @@
       </div>
     </section>
   </header>
-  <main class="bg-[#F7F8F8]  shadow-2xl mt-7 pt-6 border-t-2 border-green-500 rounded-2xl">
+  <main id="main" class="bg-[#F7F8F8]  shadow-2xl mt-7 pt-6 border-t-2 border-green-500 rounded-2xl">
 
     <section class="bg-[#F7F8F8]">
       <div class="text-center space-y-4">
@@ -171,7 +173,7 @@
         <p>Per Seat</p>
       </div>
     </section>
-    <section class="bg-[#ffffff] grid grid-cols-2 font-[inter]">
+    <section id="seats-section" class="bg-[#ffffff] grid grid-cols-2 font-[inter]">
       <div>
         <div class="p-4">
           <h4 class="text-2xl font-semibold">Select your Seat</h4>
@@ -260,12 +262,12 @@
             <h4 class="class= text-[#1DD100]">BDT <span id="total-price">000</span></h4>
           </div>
           <div class="bg-[#ffffff] flex justify-between rounded-xl">
-            <input class="w-full pl-2 rounded-l-xl" type="text" placeholder="Have any copuon">
-            <button class="bg-[#1DD100] text-white  px-3 py-3 rounded-xl">Apply</button>
+            <input id="copun-input" class="w-full pl-2 rounded-l-xl" type="text" placeholder="Have any copuon">
+            <button id="apply" class="bg-[#1DD100] text-white  px-3 py-3 rounded-xl">Apply</button>
           </div>
           <div class="text-lg font-medium flex justify-between">
             <h3>Grand Total</h3>
-            <h3>BDT 1100</h3>
+            <h3>BDT <span id="grand-total">000</span></h3>
           </div>
 
         </div>
@@ -278,7 +280,7 @@
           <h3 class="text-lg font-semibold p-2">Email ID*</h3>
           <input class="w-full p-2 rounded-lg border-[1px] border-gray-300 " type="email"
             placeholder="Enter your email id">
-          <button id="next-button"
+          <button onclick="clickNextButton(e)" id="next-button"
             class="w-full p-2 text-[#ffffff] text-lg font-medium bg-[#1DD100] rounded-xl mt-3 mb-3"
             disabled>Next</button>
           <div class="flex justify-around p-3">
@@ -322,20 +324,22 @@
         </div>
       </div>
     </section>
-    <section class="mt-10 text-center p-10 font-[inter]">
-      <div class="flex flex-col justify-center items-center shadow-2xl text-center p-12">
-        <img class="my-0 mx-auto" src="images/success.png" alt=""><br>
-        <h2 class="text-lg font-bold text-green-600">SUCCESS</h2><br>
-        <h4 class="text-base font-bold">Thank you for Booking Our Bus Seats.<br>
-          We are working hard to find the best service and deals for you.<br><span class="font-normal">Shortly you will
-            find a
-            confirmation in
-            your email.</span></h4>
-        <button class="text-base font-bold text-[#ffffff] px-14 py-1 rounded-3xl bg-green-600 mt-3">Continue</button>
-      </div>
-    </section>
-    <script src="dom.js"></script>
+
+
   </main>
+  <section id="success" class=" mt-10 text-center p-10 font-[inter] hidden">
+    <div class="flex flex-col justify-center items-center shadow-2xl text-center p-12">
+      <img class="my-0 mx-auto" src="images/success.png" alt=""><br>
+      <h2 class="text-lg font-bold text-green-600">SUCCESS</h2><br>
+      <h4 class="text-base font-bold">Thank you for Booking Our Bus Seats.<br>
+        We are working hard to find the best service and deals for you.<br><span class="font-normal">Shortly you will
+          find a
+          confirmation in
+          your email.</span></h4>
+      <button class="text-base font-bold text-[#ffffff] px-14 py-1 rounded-3xl bg-green-600 mt-3">Continue</button>
+    </div>
+  </section>
+  <script src="dom.js"></script>
 </body>
 
 </html>

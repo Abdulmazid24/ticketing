@@ -1,20 +1,18 @@
 const allseat = document.getElementsByClassName('seat');
 
-let seatBooking = getConvertedValue('seat-booking');
-let = getConvertedValue('total-seats');
+let seatSelected = getConvertedValue('seat-booking');
+let allTickets = getConvertedValue('total-seats');
 const seatClass = 'Economy';
 const ticketPrice = getConvertedValue('ticket-price');
-const copunCode1 = getInnerText('new-15');
-const copunCode2 = getInnerText('couple-20');
 
 for (const seat of allseat) {
   seat.addEventListener('click', function (event) {
     event.target.classList.add('text-white', 'bg-green-500');
     getConvertedValue('seat-booking');
-    seatBooking = seatBooking + 1;
+    seatSelected = seatSelected + 1;
     allTickets = allTickets - 1;
     setConvertedValue('total-seats', allTickets);
-    setConvertedValue('seat-booking', seatBooking);
+    setConvertedValue('seat-booking', seatSelected);
 
     const seatName = event.target.innerText;
 
@@ -53,3 +51,24 @@ function getInnerText(id) {
   const innerText = document.getElementById(id).innerText;
   return innerText;
 }
+
+document
+  .getElementById('number-input')
+  .addEventListener('keyup', function (event) {
+    let numInput = event.target.value;
+    const convertedIntValue = parseInt(numInput);
+    const next = document.getElementById('next-button');
+
+    if (seatSelected > 0 && typeof convertedIntValue === 'number') {
+      next.removeAttribute('disabled');
+    }
+  });
+
+document.getElementById('next-button').addEventListener('click', function (e) {
+  const successfull = document.getElementById('success');
+  const header = document.getElementById('header');
+  const main = document.getElementById('main');
+  header.classList.add('hidden');
+  main.classList.add('hidden');
+  successfull.classList.remove('hidden');
+});
